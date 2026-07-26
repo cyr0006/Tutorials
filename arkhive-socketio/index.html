@@ -18,7 +18,7 @@
 
     socket.on('server-message', (data) => {
       const li = document.createElement('li');
-      li.textContent = data.text;
+      li.textContent = data.text + ' (Timestamp: ' + new Date(data.timestamp).toLocaleTimeString() + ')';
       document.getElementById('log').appendChild(li);
     });
 

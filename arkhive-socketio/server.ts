@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
 
 
     // Broadcast the message to ALL connected clients
-    io.emit('server-message', { text: 'Server received: ' + data.text });
+    io.emit('server-message', { text: 'Server received: ' + data.text, timestamp: new Date() });
   });
 
 
